@@ -1,1 +1,154 @@
-<h1>Hello Hello Hello</h1>
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深夜微恐：故事集</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Noto+Sans+TC:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            background-color: #09090b;
+            color: #e4e4e7;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: inset 0 0 150px rgba(0,0,0,0.95);
+            pointer-events: none;
+            z-index: 50;
+        }
+        .flicker {
+            animation: flicker-animation 5s infinite;
+        }
+        @keyframes flicker-animation {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+            20%, 24%, 55% { opacity: 0.8; }
+            21%, 54% { opacity: 0.4; }
+        }
+        .story-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #18181b;
+        }
+        .story-card:hover {
+            transform: translateY(-8px);
+            border-color: #450a0a;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+        }
+        .blood-text {
+            color: #991b1b;
+            text-shadow: 0 0 8px rgba(153, 27, 27, 0.4);
+        }
+        /* Hide scrollbar but keep functionality */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #09090b; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #450a0a; }
+    </style>
+</head>
+<body class="selection:bg-red-950 selection:text-red-200">
+    <div class="vignette"></div>
+    <div class="fixed inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-20 pointer-events-none z-0"></div>
+
+    <main class="relative z-10 max-w-2xl mx-auto px-6 py-20">
+        <header class="text-center mb-24 flicker">
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tighter text-zinc-100 mb-6">
+                深夜微恐
+            </h1>
+            <div class="h-1 w-24 bg-red-900 mx-auto mb-6 rounded-full"></div>
+            <p class="text-zinc-500 italic text-lg">有些事情，不知道比較安全...</p>
+        </header>
+
+        <article class="story-card bg-zinc-900/40 backdrop-blur-md p-8 md:p-10 rounded-3xl mb-16">
+            <h2 class="text-2xl font-bold blood-text mb-8 border-l-4 border-red-800 pl-4 tracking-wide">深夜的訪客</h2>
+            <div class="space-y-6 text-zinc-300 leading-relaxed text-lg font-light">
+                <p>我獨自住在這棟公寓的十二樓。</p>
+                <p>為了安全，我安裝了一個帶有人臉辨識功能的智能門鈴。每當門口有人經過，手機都會彈出通知並儲存一張截圖。</p>
+                <p>昨晚凌晨兩點，手機震動了一下。通知顯示：<span class="text-red-500/90 font-medium">「偵測到訪客：陌生人（1位）」</span>。</p>
+                <p>我心裡一驚，打開手機查看即時監控。走廊上空蕩蕩的，只有昏暗感應燈閃爍了一下便熄滅了。我以為是系統誤報，便關掉手機準備入睡。</p>
+                <p>五分鐘後，手機又震動了。通知顯示：<span class="text-red-500/90 font-medium">「訪客已進入（距離門口 0 公尺）」</span>。</p>
+                <p>我透過貓眼往外看，外面依然空無一人。我颤抖著手，點開了 APP 的自動截圖紀錄。</p>
+                <p>第一張截圖：走廊空無一人。但 APP 的黃色追蹤框標記在空氣中，標註著：<span class="text-zinc-500">「成年男性，身高 185cm」</span>。</p>
+                <p>第二張截圖：這張照片的視角變了。它不再是從門鈴往外拍，而是從我的客廳內部往大門拍。</p>
+                <p>在照片的角落，我看到我正趴在大門的貓眼上往外看。而那組黃色的追蹤框，就疊在我的背後，標籤寫著：<span class="text-red-600 font-bold">「距離：0.1 公尺（追蹤中）」</span>。</p>
+                <p>就在這時，我的手機彈出了最後一則系統通知：<span class="text-red-500 font-bold underline decoration-red-900">「人臉辨識成功：這是我。」</span></p>
+            </div>
+        </article>
+
+        <article class="story-card bg-zinc-900/40 backdrop-blur-md p-8 md:p-10 rounded-3xl mb-16">
+            <h2 class="text-2xl font-bold blood-text mb-8 border-l-4 border-red-800 pl-4 tracking-wide">月台上的暴食者</h2>
+            <div class="space-y-6 text-zinc-300 leading-relaxed text-lg font-light">
+                <p>小明站在地下三層的月台時，空氣中瀰漫著一種陳年機油與腐爛鐵鏽交織的腥甜味。</p>
+                <p>那是最後一班車。電子看板上的字跡瘋狂跳動，最終定格在一個不存在的時間：<span class="text-red-900 font-mono font-bold">24:61</span>。</p>
+                <p>隨著一聲如垂死巨獸磨牙般的尖銳摩擦聲，一列鏽跡斑斑的火車緩緩駛進月台。車窗漆黑一片，像是一排整齊排列的死人眼窩。</p>
+                <p>在那裡，他看見了一個穿著寬大雨衣的高瘦男人，正蹲在火車頭上方，動作帶著一種昆蟲般的節律感。</p>
+                <p>男人伸出蒼白的手，輕易地撕下火車頭的一角鋼鐵塞進嘴裡。牙齒與鋼鐵碰撞發出的聲音，比指甲刮過黑板還要令人心碎。</p>
+                <p>「這是一段被遺忘的通勤時間，」男人一邊吞嚥著車門，一邊含糊地說，「如果我不吃掉它，這些時間就會在隧道裡發霉，變成你們口中的『鬼魂』。」</p>
+                <p>第二天早晨，清潔工在月台發現了一堆奇怪的碎屑。那不是垃圾，那是人類的牙齒碎片，混合著高品質的碳鋼殘渣。</p>
+            </div>
+        </article>
+
+        <footer class="mt-32 text-center border-t border-zinc-900 pt-16 mb-20">
+            <button id="copyBtn" class="group relative px-8 py-3 overflow-hidden rounded-full bg-zinc-100 text-zinc-950 font-bold transition-all hover:bg-white active:scale-95">
+                <span class="relative z-10">複製所有故事內容</span>
+            </button>
+            
+            <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-red-950 text-red-100 border border-red-800 px-6 py-3 rounded-2xl opacity-0 transition-all duration-500 transform translate-y-10 pointer-events-none z-50">
+                故事已收入囊中...
+            </div>
+            
+            <p class="mt-12 text-zinc-700 text-sm tracking-widest uppercase">
+                © 2024 深夜微恐錄 · 請勿回頭
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('copyBtn').addEventListener('click', function() {
+            const stories = document.querySelectorAll('article');
+            let fullText = "【深夜微恐故事集】\n\n";
+            stories.forEach(story => {
+                fullText += "─── " + story.querySelector('h2').innerText + " ───\n" 
+                         + story.querySelector('div').innerText.replace(/\n\s+/g, '\n') + "\n\n";
+            });
+            
+            // Clipboard functionality using the recommended fallback for this environment
+            const tempTextArea = document.createElement("textarea");
+            tempTextArea.value = fullText;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            try {
+                document.execCommand('copy');
+                showToast();
+            } catch (err) {
+                console.error('無法複製', err);
+            }
+            document.body.removeChild(tempTextArea);
+        });
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.style.opacity = '1';
+            toast.style.transform = 'translate(-50%, 0)';
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translate(-50%, 10px)';
+            }, 3000);
+        }
+
+        // Add a subtle parallax effect to the vignette
+        window.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 20;
+            const y = (e.clientY / window.innerHeight - 0.5) * 20;
+            document.querySelector('.vignette').style.transform = `translate(${x}px, ${y}px) scale(1.1)`;
+        });
+    </script>
+</body>
+</html>
